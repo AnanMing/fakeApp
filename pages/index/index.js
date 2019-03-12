@@ -4,11 +4,20 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    //motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  clickMe(){
+    wx.navigateTo({
+      url: '../home/home',
+    })
+  } ,
+
+
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

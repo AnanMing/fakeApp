@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view>{{array[0].msg}}</view>
+<!--index.wxml-->
+<view>{{text}}</view>
+<button bindtap="changeText">Change normal data</button>
+<view>{{num}}</view>
+<button bindtap="changeNum">Change normal num</button>
+<view>{{array[0].text}}</view>
+<button bindtap="changeItemInArray">Change Array data</button>
+<view>{{object.text}}</view>
+<button bindtap="changeItemInObject">Change Object data</button>
+<view>{{newField.text}}</view>
+<button bindtap="addNewField">Add new data</button>
+<view wx:for="{{list}}">{{item}}</view>
+<view wx:if="{{view2=='haha'}}">HAHAHA</view>
+<view wx:else="{{view2=='hehe'}}">HEHE</view>
+<template name="name_from">
+  <view>
+    name:{{name}} ,age:{{age}}
+  </view>
+</template>  
+<template is="name_from" data="{{...fromA}}"></template>
+<template is="name_from" data="{{...fromB}}"></template>
+<template is="name_from" data="{{...fromC}}"></template>
+<view bindtap='add'>{{count}}</view>
+<view id='{{id}}'></view>
+<view wx:if="{{condition}}">show up</view>
+<view wx:else="{{condition}}">hidden</view>
+<checkbox checked='{{true}}'></checkbox>
+<view>{{object.key}}{{arr[0]}}</view>
+<block wx:for="{{[1, 2, 3]}}">
+  <view>{{index}}:</view><view>{{item}}</view>
+</block>
