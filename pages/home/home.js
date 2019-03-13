@@ -3,7 +3,7 @@ Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
     text: 'This is page data.',
     num: 0,
@@ -24,9 +24,20 @@ Page({
     },
     arr:['789789']
   },
+  onShow() {
+    console.log(this.route)
+  },
+  viewTap() {
+    console.log(this.route)
+  },
   add(e){
     this.setData({
       count:this.data.count+1
+    })
+  },
+  route(){
+    this.setData({
+      route: this.route  
     })
   },
   changeText() {

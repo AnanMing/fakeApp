@@ -31,3 +31,15 @@
 <block wx:for="{{[1, 2, 3]}}">
   <view>{{index}}:</view><view>{{item}}</view>
 </block>
+<view bindtap='route'>当前route ：{{route}}</view>
+<view bindtap="viewTap">click me</view>
+
+<template name="odd">
+  <view>odd</view>
+</template>
+<template name="even">
+  <view>even</view>
+</template>
+<block wx:for="{{[1,2,3,4,5]}}">
+  <template is="{{item % 2 == 0 ? 'even' : 'odd'}}" />
+</block>
